@@ -1,18 +1,16 @@
-Choosy
-======
+Why?
+====
 
-Effortlessly enable your users to choose default apps for external actions without writing any app-specific code. 
-
-Why? When widely implemented by developers, users will be able to traverse iOS using the apps they love, which may or may not include default iOS apps. There are more benefits possible, but this is the main goal. 
+When widely implemented by developers, users will be able to traverse iOS using the apps they love, which may or may not include default iOS apps. There are more benefits possible, but this is the main goal. 
 
 A picture is worth... 
 ==================
 
 Interactions: 
-A tap shows an activity sheet-like view that shows installed apps for a given app type (Browser, Navigation, Email, Twitter, etc.) and lets the end user select their favorite app.
-A long-press resets the default and asks the user to select a favorite app again.
-If the app user designated as default is deleted, the choices are presented again.
-If a new app of same type is installed (such as a new Twitter client), the choices are presented again.
+* A _tap_ shows an activity sheet-like view that shows installed apps for a given app type (Browser, Navigation, Email, Twitter, etc.) and lets the end user select their favorite app.
+* A _long press_ resets the default and asks the user to select a favorite app again.
+* If the app user designated as default is deleted, the choices are presented again.
+* If a new app of same type is installed (such as a new Twitter client), the choices are presented again.
 
 Imagine: 
 No Choosy: your WebView has 'Open in Safari' button, but your user loves Chrome. *wishful and slightly sad user face* 
@@ -34,9 +32,9 @@ Very. You have two options.
 
 Easiest: 
 -------
-1. Register qualifying UIControls with Choosy like this:
+Register qualifying UIControls with Choosy like this:
 
-[SBChoosyRegister registerUIElement:myButton forAction:[SBChoosyActionContext initWithAppType:@"Twitter"]];
+> [SBChoosyRegister registerUIElement:myButton forAction:[SBChoosyActionContext initWithAppType:@"Twitter"]];
 
 That's it! Choosy will hook up a tap and long press gesture recognizers to that button (can be any UIControl) and do all the magic for you. 
 
@@ -45,18 +43,17 @@ PS: Yes! We have more initWith... methods that let you describe specific actions
 Easier: 
 ------
 1. Add your own gesture recognizers and call Choosy as appropriate. (We strongly recommend following the tap+long press theme, if at all possible given your UX.) 
-
 2. In your viewDidLoad or similar, call: 
 
-[SBChoosy registerAppTypes:@[@"Twitter", @"Browser", @"Mail", ...]]
+> [SBChoosy registerAppTypes:@[@"Twitter", @"Browser", @"Mail", ...]]
 
-// Prepare means: pre-load data about apps that are in those registered app categories, including any new app icons, in the background.
-[SBChoosy prepare]; 
+> // Prepare means: pre-load data about apps that are in those registered app categories, including any new app icons, in the background.
+> [SBChoosy prepare]; 
 
 NOTE: Since it's a background operation, you can also do step #2 as the last item in appDidLoad in your App Delegate, if you'd like to make sure there's ample time to load all the data (especially helpful if your users typically don't have a good connection).
 
 
 Customization:
 -------------
-More complex cases: 
+
 1. Register a delegate with Choosy. The most important question a delegate can answer is, what is the parent view controller for Choosy's view controller? If the delegate does not respond to that question, but the delegate itself is a view controller, that view controller is used as the parent. But if the delegate is not present at all, Choosy uses top-most (i.e. currently visible) view controller in the Window hierarchy as the parent.
