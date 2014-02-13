@@ -1,0 +1,16 @@
+[{
+	"name" : "Twitter",
+	"key" : "twitter",
+	"default_app_url" : "twitter://", 
+	"parameters" : 
+	[{			
+		"name" : "Text", 
+		"description" : "Text to insert into the new tweet textbox", 
+		"key" : "text"			
+	}], 
+	"actions" : 
+	[{
+		"name" : "Tweet", 				
+		"key" : "text"			
+	}]
+}]
