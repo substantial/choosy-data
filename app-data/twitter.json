@@ -1,7 +1,6 @@
 [{
 	"name" : "Twitter",
 	"key" : "twitter",
-	"default_app_url" : "twitter://", 
 	"parameters" : 
 	[{			
 		"name" : "Text", 
