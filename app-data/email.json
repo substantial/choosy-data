@@ -1,0 +1,43 @@
+[{
+    "name" : "Email",
+    "key" : "email",
+    "parameters" :
+        [{
+        "name" : "Text",
+        "description" : "Text to insert into the body of a new email",
+        "key" : "text"
+        }],
+    "actions" :
+        [{
+        "name" : "Compose",
+        "key" : "compose"
+        }],
+    "apps" :
+        [{
+        "name" : "Mail",
+        "key" : "mail",
+        "actions" :
+        [{
+            "key" : "compose",
+            "url_format" : "mail://"
+        }]
+        },
+        {
+        "name" : "Gmail",
+        "key" : "googlemail",
+        "actions" :
+            [{
+            "key" : "compose",
+            "url_format" : "googlemail://"
+            }]
+        },
+        {
+        "name" : "Mailbox",
+        "key" : "mailbox",
+        "actions" :
+            [{
+            "key" : "compose",
+            "url_format" : "mailbox://"
+            }]
+        }]
+ }]
