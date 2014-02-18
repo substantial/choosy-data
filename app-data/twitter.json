@@ -39,8 +39,8 @@
         "app_url_scheme" : "twitter://",
         "actions" :
             [{
-            "key" : "tweet",
-            "url_format" : "twitter://"
+            "key" : "show_profile",
+            "url_format" : "twitter:///user?screen_name={{profile_screenname}}"
             }]
         },
         {
