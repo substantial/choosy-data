@@ -40,7 +40,7 @@
         "actions" :
             [{
             "key" : "show_profile",
-            "url_format" : "twitter:///user?screen_name={{profile_screenname}}"
+            "url_format" : "twitter://user?screen_name={{profile_screenname}}"
             }]
         },
         {
