@@ -16,6 +16,7 @@
         [{
         "name" : "Safari",
         "key" : "safari",
+        "app_url_scheme" : "http://",
         "actions" :
         [{
             "key" : "tweet",
@@ -25,6 +26,7 @@
         {
         "name" : "Twitter",
         "key" : "twitter",
+        "app_url_scheme" : "twitter://",
         "actions" :
             [{
             "key" : "tweet",
@@ -32,8 +34,19 @@
             }]
         },
         {
+        "name" : "Tweetbot",
+        "key" : "tweetbot",
+        "app_url_scheme" : "tweetbot://",
+        "actions" :
+            [{
+            "key" : "tweet",
+            "url_format" : "tweetbot://"
+            }]
+        },
+        {
         "name" : "Twitteriffic",
         "key" : "twitteriffic",
+        "app_url_scheme" : "twitteriffic://",
         "actions" :
             [{
             "key" : "tweet",
@@ -43,6 +56,7 @@
         {
         "name" : "Echophon",
         "key" : "echophon",
+        "app_url_scheme" : "echophon://",
         "actions" :
             [{
             "key" : "tweet",

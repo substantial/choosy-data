@@ -16,6 +16,7 @@
         [{
         "name" : "Mail",
         "key" : "mail",
+        "app_url_scheme" : "mail://",
         "actions" :
         [{
             "key" : "compose",
@@ -25,6 +26,7 @@
         {
         "name" : "Gmail",
         "key" : "googlemail",
+        "app_url_scheme" : "googlemail://",
         "actions" :
             [{
             "key" : "compose",
@@ -34,6 +36,7 @@
         {
         "name" : "Mailbox",
         "key" : "mailbox",
+        "app_url_scheme" : "mailbox://",
         "actions" :
             [{
             "key" : "compose",
