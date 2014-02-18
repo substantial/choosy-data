@@ -70,11 +70,11 @@
         {
         "name" : "Echophon",
         "key" : "echophon",
-        "app_url_scheme" : "echophon://",
+        "app_url_scheme" : "echofon:///",
         "actions" :
             [{
             "key" : "tweet",
-            "url_format" : "echophon://"
+            "url_format" : "echofon:///"
             }]
         }]
  }]
