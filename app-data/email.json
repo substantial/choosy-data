@@ -3,9 +3,14 @@
     "key" : "email",
     "parameters" :
         [{
-        "name" : "Text",
+        "name" : "Body Text",
         "description" : "Text to insert into the body of a new email",
-        "key" : "text"
+        "key" : "body"
+        },
+        {
+        "name" : "Recipient - To",
+        "description" : "Recipient(s) email address(ses)", 
+        "key" : "to_recipient"
         }],
     "actions" :
         [{
@@ -16,21 +21,21 @@
         [{
         "name" : "Mail",
         "key" : "mail",
-        "app_url_scheme" : "mail://",
+        "app_url_scheme" : "mailto:",
         "actions" :
-        [{
+            [{
             "key" : "compose",
-            "url_format" : "mail://"
-        }]
+            "url_format" : "mailto:{{to_recipient}}"
+            }]
         },
         {
         "name" : "Gmail",
         "key" : "googlemail",
-        "app_url_scheme" : "googlemail://",
+        "app_url_scheme" : "googlegmail://",
         "actions" :
             [{
             "key" : "compose",
-            "url_format" : "googlemail://"
+            "url_format" : "googlegmail://"
             }]
         },
         {
@@ -41,6 +46,16 @@
             [{
             "key" : "compose",
             "url_format" : "mailbox://"
+            }]
+        },
+        {
+        "name" : "Yahoo! Mail",
+        "key" : "ymail",
+        "app_url_scheme" : "ymail://",
+        "actions" :
+            [{
+            "key" : "compose",
+            "url_format" : "ymail://"
             }]
         }]
  }]
