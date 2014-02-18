@@ -44,20 +44,6 @@
             }]
         },
         {
-        "name" : "Tweetbot",
-        "key" : "tweetbot",
-        "app_url_scheme" : "tweetbot://",
-        "actions" :
-            [{
-            "key" : "tweet",
-            "url_format" : "tweetbot://"
-            }, 
-            {
-            "key" : "show_profile",
-            "url_format" : "tweetbot:///user_profile/{{profile_screenname}}?callback_url={{callback_url}}"
-            }]
-        },
-        {
         "name" : "Twitteriffic",
         "key" : "twitteriffic",
         "app_url_scheme" : "twitteriffic://",
