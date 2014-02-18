@@ -11,6 +11,11 @@
          "name" : "Profile Username",
          "description" : "Username of the profile to be shown",
          "key" : "profile_screenname",
+         },
+         {
+         "name" : "Callback URL",
+         "description" : "URL of the app to go back to when action is done",
+         "key" : "callback_url",
          }],
     "actions" :
         [{
@@ -46,6 +51,10 @@
             [{
             "key" : "tweet",
             "url_format" : "tweetbot://"
+            }, 
+            {
+            "key" : "show_profile",
+            "url_format" : "tweetbot:///user_profile/{{profile_screenname}}?callback_url={{callback_url}}"
             }]
         },
         {
