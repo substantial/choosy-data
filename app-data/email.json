@@ -30,7 +30,7 @@
         },
         {
         "name" : "Gmail",
-        "key" : "googlemail",
+        "key" : "gmail",
         "app_url_scheme" : "googlegmail://",
         "actions" :
             [{
