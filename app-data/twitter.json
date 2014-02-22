@@ -68,8 +68,8 @@
             }]
         },
         {
-        "name" : "Echophon",
-        "key" : "echophon",
+        "name" : "Echofon",
+        "key" : "echofon",
         "app_url_scheme" : "echofon:///",
         "actions" :
             [{
