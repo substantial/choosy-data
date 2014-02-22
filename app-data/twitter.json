@@ -70,11 +70,6 @@
         {
         "name" : "Echofon",
         "key" : "echofon",
-        "app_url_scheme" : "echofon:///",
-        "actions" :
-            [{
-            "key" : "tweet",
-            "url_format" : "echofon:///"
-            }]
+        "app_url_scheme" : "echofon:///"
         }]
  }]
