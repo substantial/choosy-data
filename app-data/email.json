@@ -46,11 +46,11 @@
         {
         "name" : "Mailbox",
         "key" : "mailbox",
-        "app_url_scheme" : "mailbox://",
+        "app_url_scheme" : "mailbox-url-callback",
         "actions" :
             [{
             "key" : "compose",
-            "url_format" : "mailbox://"
+            "url_format" : "mailbox-url-callback"
             }]
         },
         {
