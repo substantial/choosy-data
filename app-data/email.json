@@ -40,7 +40,7 @@
         "actions" :
             [{
             "key" : "compose",
-            "url_format" : "googlegmail://"
+            "url_format" : "googlegmail://co?subject={{subject}}&body={{body}}&to={{to}}&cc={{cc}}"
             }]
         },
         {
