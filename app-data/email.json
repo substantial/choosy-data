@@ -1,17 +1,43 @@
 [{
     "name" : "Email",
     "key" : "email",
-    "parameters" :
-        [{
+      "parameters" :
+      [{
         "name" : "Body Text",
         "description" : "Text to insert into the body of a new email",
         "key" : "body"
-        },
-        {
-        "name" : "Recipient - To",
-        "description" : "Recipient(s) email address(ses)", 
-        "key" : "to_recipient"
-        }],
+       },
+       {
+        "name" : "Recipients - To",
+        "description" : "Recipient(s) email address(ses)",
+        "key" : "to"
+       },
+       {
+        "name" : "Recipients - CC",
+        "description" : "Email addresses to CC (copy)",
+        "key" : "cc"
+       },
+       {
+       "name" : "Subject",
+       "description" : "Email subject",
+       "key" : "subject"
+       }],
+      "actions" :
+      [{
+        "name" : "Compose",
+        "key" : "compose"
+       }],
+      "apps" :
+      [{
+        "name" : "Mail",
+        "key" : "mail",
+        "app_url_scheme" : "mailto:",
+        "actions" :
+       [{
+        "key" : "compose",
+        "url_format" : "mailto:?to={{to}}&cc={{cc}}&subject={{subject}}&body={{body}}"
+        }]
+       }],
     "actions" :
         [{
         "name" : "Compose",
@@ -25,7 +51,7 @@
         "actions" :
             [{
             "key" : "compose",
-            "url_format" : "mailto:{{to_recipient}}"
+            "url_format" : "mailto:?to={{to}}&cc={{cc}}&subject={{subject}}&body={{body}}"
             }]
         },
         {
