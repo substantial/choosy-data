@@ -30,16 +30,16 @@
    }],
   "apps" :
   [{
-   "name" : "Maps",
-   "key" : "maps",
-   "app_url_scheme" : "http://maps.apple.com/",
-   "actions" :
-   [{
-    "key" : "directions",
-    "url_format" : "http://maps.apple.com/?daddr={{end_address}}&saddr={{start_address}}"
-    }]
-    },
-    {
+    "name" : "Maps",
+    "key" : "maps",
+    "app_url_scheme" : "http://maps.apple.com/",
+    "actions" :
+      [{
+      "key" : "directions",
+      "url_format" : "http://maps.apple.com/?daddr={{end_address}}&saddr={{start_address}}"
+      }]
+  },
+  {
    	"name" : "Google Maps",
    	"key" : "googlemaps",
    	"app_url_scheme" : "comgooglemaps:",
@@ -48,6 +48,5 @@
       "key" : "directions",
       "url_format" : "comgooglemaps://?daddr={{end_address}}&saddr={{start_address}}"
       }]
-    }]
   }]
 }]
