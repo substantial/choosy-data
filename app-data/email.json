@@ -1,7 +1,7 @@
 [{
     "name" : "Email",
     "key" : "email",
-      "parameters" :
+    "parameters" :
       [{
         "name" : "Body Text",
         "description" : "Text to insert into the body of a new email",
@@ -22,27 +22,6 @@
        "description" : "Email subject",
        "key" : "subject"
        }],
-      "actions" :
-      [{
-        "name" : "Compose",
-        "key" : "compose"
-       }],
-      "apps" :
-      [{
-        "name" : "Mail",
-        "key" : "mail",
-        "app_url_scheme" : "mailto:",
-        "actions" :
-       [{
-        "key" : "compose",
-        "url_format" : "mailto:?to={{to}}&cc={{cc}}&subject={{subject}}&body={{body}}"
-        }]
-       }],
-    "actions" :
-        [{
-        "name" : "Compose",
-        "key" : "compose"
-        }],
     "apps" :
         [{
         "name" : "Mail",
