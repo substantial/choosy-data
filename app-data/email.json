@@ -21,7 +21,12 @@
        "name" : "Subject",
        "description" : "Email subject",
        "key" : "subject"
-       }],
+    }],
+    "actions" :
+        [{
+        "name" : "Compose",
+        "key" : "compose"
+    }],
     "apps" :
         [{
         "name" : "Mail",
