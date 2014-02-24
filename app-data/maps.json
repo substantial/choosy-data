@@ -1,0 +1,52 @@
+[
+  {
+  "name" : "Maps",
+  "key" : "maps",
+  "parameters" :
+  [{
+   "name" : "Search Query",
+   "description" : "Name of business or address to search for",
+   "key" : "query"
+   },
+   {
+   "name" : "Start Location",
+   "description" : "",
+   "key" : "start_address"
+   },
+   {
+   "name" : "Destination Location",
+   "description" : "",
+   "key" : "end_address"
+   },
+   {
+   "name" : "Map Mode",
+   "description" : "Such as hybrid, sattelite, etc.",
+   "key" : "map_mode"
+   }],
+  "actions" :
+  [{
+   "name" : "Get Directions",
+   "key" : "directions"
+   }],
+  "apps" :
+  [{
+   "name" : "Maps",
+   "key" : "maps",
+   "app_url_scheme" : "http://maps.apple.com/",
+   "actions" :
+   [{
+    "key" : "directions",
+    "url_format" : "http://maps.apple.com/?daddr={{end_address}}&saddr={{start_address}}"
+    },
+    {
+   	"name" : "Google Maps",
+   	"key" : "googlemaps",
+   	"app_url_scheme" : "comgooglemaps:",
+   	"actions" :
+   [{
+    "key" : "directions",
+    "url_format" : "comgooglemaps://?daddr={{end_address}}&saddr={{start_address}}"
+    }
+    ]
+   }
+]
