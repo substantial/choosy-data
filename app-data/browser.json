@@ -1,0 +1,53 @@
+[{
+    "name" : "Browser",
+    "key" : "browser",
+    "parameters" :
+        [{
+         "name" : "Url Without Scheme",
+         "description" : "Destination url, without the scheme (without the http or https part)",
+         "key" : "url_no_scheme"
+         },
+         {
+         "name" : "Query",
+         "description" : "Search query",
+         "key" : "query",
+         }],
+    "actions" :
+        [{
+        "name" : "Browse via HTTP",
+        "key" : "browse_http"
+        },
+        {
+        "name" : "Browse via HTTPS",
+        "key" : "browse_https"
+        }],
+    "apps" :
+        [{
+         "name" : "Safari",
+         "key" : "safari",
+         "app_url_scheme" : "http://",
+         "actions" :
+        [{
+            "key" : "browse_http",
+            "url_format" : "http://{{url_no_scheme}}"
+        },
+        {
+            "key" : "browse_https",
+            "url_format" : "https://{{url_no_scheme}}"
+        }]
+        },
+        {
+        "name" : "Chrome",
+        "key" : "chrome",
+        "app_url_scheme" : "googlechrome://",
+        "actions" :
+            [{
+            "key" : "browse_http",
+            "url_format" : "googlechrome://{{url_no_scheme}}"
+            },
+            {
+            "key" : "browse_https",
+            "url_format" : "googlechromes://{{url_no_scheme}}"
+            }]
+        }]
+ }]
