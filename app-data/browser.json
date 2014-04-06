@@ -3,9 +3,9 @@
     "key" : "browser",
     "parameters" :
         [{
-         "name" : "Url Without Scheme",
-         "description" : "Destination url, without the scheme (without the http or https part)",
-         "key" : "url_no_scheme"
+         "name" : "Destination Url",
+         "description" : "Destination url, must include scheme (either http or https)",
+         "key" : "url"
          },
          {
          "name" : "Query",
@@ -37,13 +37,10 @@
          "key" : "safari",
          "app_url_scheme" : "http://",
          "actions" :
-        [{
-            "key" : "browse_http",
-            "url_format" : "http://{{url_no_scheme}}"
-        },
+        [
         {
-            "key" : "browse_https",
-            "url_format" : "https://{{url_no_scheme}}"
+            "key" : "browse",
+            "url_format" : "{{url}}"
         }]
         },
         {
@@ -53,11 +50,7 @@
         "actions" :
             [{
             "key" : "browse",
-            "url_format" : "googlechrome-x-callback://x-callback-url/open/?x-source={{}}&x-success=%@&url=%@"
-            },
-            {
-            "key" : "browse_https",
-            "url_format" : "googlechromes://{{url_no_scheme}}"
+            "url_format" : "googlechrome-x-callback://x-callback-url/open/?x-source={{callback_app_name}}&x-success={{callback_url_on_success}}&url={{url}}"
             }]
         }]
  }]
