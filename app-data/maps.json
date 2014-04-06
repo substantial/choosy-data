@@ -26,12 +26,12 @@
    {
       "name" : "URL for callback",
       "description" : "Url scheme to call in order to return to your app",
-      "key" : "callback_url_on_success"
+      "key" : "callback_url"
    }, 
    {
       "name" : "Callback app name",
       "description" : "Name of your app, if using callback feature",
-      "key" : "callback_app_name"
+      "key" : "callback_name"
    }],
   "actions" :
   [{
@@ -56,7 +56,7 @@
    	"actions" :
       [{
       "key" : "directions",
-      "url_format" : "comgooglemaps-x-callback://?daddr={{end_address}}&saddr={{start_address}}&x-success={{callback_url_on_success}}&x-source={{callback_app_name}}"
+      "url_format" : "comgooglemaps-x-callback://?daddr={{end_address}}&saddr={{start_address}}&x-success={{callback_url}}&x-source={{callback_name}}"
       }]
   }]
 }]
