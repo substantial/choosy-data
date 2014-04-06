@@ -46,7 +46,7 @@
    	"actions" :
       [{
       "key" : "directions",
-      "url_format" : "comgooglemaps-x-callback://?daddr={{end_address}}&saddr={{start_address}}"
+      "url_format" : "comgooglemaps-x-callback://?daddr={{end_address}}&saddr={{start_address}}&x-success={{callback_url_on_success}}&x-source={{callback_app_name}}"
       }]
   }]
 }]
