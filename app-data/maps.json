@@ -22,6 +22,16 @@
    "name" : "Map Mode",
    "description" : "Such as hybrid, sattelite, etc.",
    "key" : "map_mode"
+   }, 
+   {
+      "name" : "URL for callback",
+      "description" : "Url scheme to call in order to return to your app",
+      "key" : "callback_url_on_success"
+   }, 
+   {
+      "name" : "Callback app name",
+      "description" : "Name of your app, if using callback feature",
+      "key" : "callback_app_name"
    }],
   "actions" :
   [{
