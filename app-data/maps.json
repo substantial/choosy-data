@@ -36,7 +36,7 @@
   "actions" :
   [{
    "name" : "Get Directions",
-   "key" : "directions"
+   "key" : "open"
    }],
   "apps" :
   [{
@@ -45,8 +45,8 @@
     "app_url_scheme" : "http://maps.apple.com/?q",
     "actions" :
       [{
-      "key" : "directions",
-      "url_format" : "http://maps.apple.com/?q=&daddr={{end_address}}&saddr={{start_address}}"
+      "key" : "open",
+      "url_format" : "http://maps.apple.com/?q={{query}}&daddr={{end_address}}&saddr={{start_address}}"
       }]
   },
   {
@@ -55,8 +55,8 @@
    	"app_url_scheme" : "comgooglemaps-x-callback:",
    	"actions" :
       [{
-      "key" : "directions",
-      "url_format" : "comgooglemaps-x-callback://?daddr={{end_address}}&saddr={{start_address}}&x-success={{callback_url}}&x-source={{callback_name}}"
+      "key" : "open",
+      "url_format" : "comgooglemaps-x-callback://?q={{query}}daddr={{end_address}}&saddr={{start_address}}&x-success={{callback_url}}&x-source={{callback_name}}"
       }]
   }]
 }]
