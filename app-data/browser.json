@@ -1,4 +1,3 @@
-
 [{
     "name" : "Browser",
     "key" : "browser",
@@ -12,6 +11,16 @@
          "name" : "Query",
          "description" : "Search query",
          "key" : "query",
+         }, 
+         {
+            "name" : "URL for callback",
+            "description" : "Url scheme to call in order to return to your app",
+            "key" : "callback_url_on_success"
+         }, 
+         {
+            "name" : "Callback app name",
+            "description" : "Name of your app, if using callback feature",
+            "key" : "callback_app_name"
          }],
     "actions" :
         [{
@@ -40,11 +49,11 @@
         {
         "name" : "Chrome",
         "key" : "chrome",
-        "app_url_scheme" : "googlechrome://",
+        "app_url_scheme" : "googlechrome-x-callback://",
         "actions" :
             [{
-            "key" : "browse_http",
-            "url_format" : "googlechrome://{{url_no_scheme}}"
+            "key" : "browse",
+            "url_format" : "googlechrome-x-callback://x-callback-url/open/?x-source={{}}&x-success=%@&url=%@"
             },
             {
             "key" : "browse_https",
