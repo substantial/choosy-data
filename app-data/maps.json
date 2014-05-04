@@ -56,7 +56,7 @@
    	"actions" :
       [{
       "key" : "open",
-      "url_format" : "comgooglemaps-x-callback://?q={{query}}daddr={{end_address}}&saddr={{start_address}}&x-success={{callback_url}}&x-source={{callback_name}}"
+      "url_format" : "comgooglemaps-x-callback://?q={{query}}&daddr={{end_address}}&saddr={{start_address}}&x-success={{callback_url}}&x-source={{callback_name}}"
       }]
   }]
 }]
