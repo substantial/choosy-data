@@ -22,6 +22,11 @@
    "name" : "Map Mode",
    "description" : "Such as hybrid, sattelite, etc.",
    "key" : "map_mode"
+   },   
+   {
+   "name" : "Start Navigation",
+   "description" : "Pass 'yes' immediately begin turn-by-turn directions, without waiting for user to press the start button",
+   "key" : "start_navigating"
    }, 
    {
       "name" : "URL for callback",
@@ -36,7 +41,11 @@
   "actions" :
   [{
    "name" : "Get Directions",
-   "key" : "open"
+   "key" : "get_directions"
+   }, 
+   {
+    "name" : "Search/query",
+    "key" : "search"
    }],
   "apps" :
   [{
@@ -45,8 +54,12 @@
     "app_url_scheme" : "http://maps.apple.com/?q",
     "actions" :
       [{
-      "key" : "open",
-      "url_format" : "http://maps.apple.com/?q={{query}}&daddr={{end_address}}&saddr={{start_address}}"
+      "key" : "get_directions",
+      "url_format" : "http://maps.apple.com/?daddr={{end_address}}&saddr={{start_address}}"
+      },
+      {
+      "key" : "search",
+      "url_format" : "http://maps.apple.com/?q={{query}}"
       }]
   },
   {
@@ -55,8 +68,12 @@
    	"app_url_scheme" : "comgooglemaps-x-callback:",
    	"actions" :
       [{
-      "key" : "open",
-      "url_format" : "comgooglemaps-x-callback://?q={{query}}&daddr={{end_address}}&saddr={{start_address}}&x-success={{callback_url}}&x-source={{callback_name}}"
+      "key" : "get_directions",
+      "url_format" : "comgooglemaps-x-callback://?daddr={{end_address}}&saddr={{start_address}}&x-success={{callback_url}}&x-source={{callback_name}}"
+      },
+      {
+      "key" : "search",
+      "url_format" : "comgooglemaps-x-callback://?q={{query}}&x-success={{callback_url}}&x-source={{callback_name}}"
       }]
   },
   {
@@ -65,8 +82,8 @@
    	"app_url_scheme" : "waze:",
    	"actions" :
       [{
-      "key" : "open",
-      "url_format" : "waze://?ll={{end_address}}&navigate=yes"
+      "key" : "get_directions",
+      "url_format" : "waze://?ll={{end_address}}&navigate={{start_navigating}}"
       }]
   }]
 }]
