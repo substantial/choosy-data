@@ -51,6 +51,10 @@
    {
     "name" : "Search/query",
     "key" : "search"
+   }, 
+   {
+    "name" : "Specific Location",
+    "key" : "show_location"
    }],
   "apps" :
   [{
@@ -88,11 +92,15 @@
    	"actions" :
       [{
       "key" : "get_directions",
-      "url_format" : "waze://?q={{end_address}}&ll={{latitude_longitude}}&navigate={{start_navigating}}"
+      "url_format" : "waze://?ll={{latitude_longitude}}&navigate={{start_navigating}}"
       },
       {
       "key" : "search",
-      "url_format" : "waze://?q={{query}}&&ll={{latitude_longitude}}"
+      "url_format" : "waze://?q={{query}}"
+      },
+      {
+      "key" : "show_location",
+      "url_format" : "waze://?ll={{latitude_longitude}}"
       }]
   }]
 }]
