@@ -10,13 +10,18 @@
    },
    {
    "name" : "Start Location",
-   "description" : "",
+   "description" : "In plain text, such as 1 Infinite Loop, Cupertino, CA 95014",
    "key" : "start_address"
    },
    {
    "name" : "Destination Location",
-   "description" : "",
+   "description" : "In plain text, such as 1 Infinite Loop, Cupertino, CA 95014",
    "key" : "end_address"
+   },
+   {
+   "name" : "Location",
+   "description" : "A string that contains latitude and longitude, separated by comma. Example: '37.44469,-122.15971'",
+   "key" : "latitude_longitude"
    },
    {
    "name" : "Map Mode",
@@ -83,7 +88,7 @@
    	"actions" :
       [{
       "key" : "get_directions",
-      "url_format" : "waze://?ll={{end_address}}&navigate={{start_navigating}}"
+      "url_format" : "waze://?ll={{latitude_longitude}}&navigate={{start_navigating}}"
       }]
   }]
 }]
