@@ -88,11 +88,11 @@
    	"actions" :
       [{
       "key" : "get_directions",
-      "url_format" : "waze://?ll={{latitude_longitude}}&navigate={{start_navigating}}"
+      "url_format" : "waze://?q={{end_address}}&ll={{latitude_longitude}}&navigate={{start_navigating}}"
       },
       {
       "key" : "search",
-      "url_format" : "waze://?q={{query}}"
+      "url_format" : "waze://?q={{query}}&&ll={{latitude_longitude}}"
       }]
   }]
 }]
