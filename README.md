@@ -1,4 +1,4 @@
-This is the data repository for the open-source [Choosy framework](https://github.com/substantial/choosy).
+This is the data repository for the open-source [Choosy framework](https://github.com/substantial/choosy). To stay informed about any breaking data structure changes and major updates, please follow [@choosyios](http://www.twitter.com/choosyios) on Twitter.
 
 If you'd like to register an app's URL scheme with Choosy, please fork, modify, and submit a pull request. We'll work with you to property categorize the app, define actions and parameters, etc.
 
