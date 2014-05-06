@@ -41,7 +41,7 @@
         {
         "name" : "Gmail",
         "key" : "gmail",
-        "app_url_scheme" : "googlegmail://",
+        "app_url_scheme" : "googlegmail:",
         "actions" :
             [{
             "key" : "compose",
@@ -61,7 +61,7 @@
         {
         "name" : "Yahoo! Mail",
         "key" : "ymail",
-        "app_url_scheme" : "ymail://",
+        "app_url_scheme" : "ymail:",
         "actions" :
             [{
             "key" : "compose",
