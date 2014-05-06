@@ -46,11 +46,11 @@
         {
         "name" : "Tweetbot",
         "key" : "tweetbot",
-        "app_url_scheme" : "tweetbot://",
+        "app_url_scheme" : "tweetbot:",
         "actions" :
             [{
             "key" : "tweet",
-            "url_format" : "tweetbot://"
+            "url_format" : "tweetbot:"
             }, 
             {
             "key" : "show_profile",
@@ -60,16 +60,16 @@
         {
         "name" : "Twitteriffic",
         "key" : "twitteriffic",
-        "app_url_scheme" : "twitteriffic://",
+        "app_url_scheme" : "twitteriffic:",
         "actions" :
             [{
             "key" : "tweet",
-            "url_format" : "twitteriffic://"
+            "url_format" : "twitteriffic:"
             }]
         },
         {
         "name" : "Echofon",
         "key" : "echofon",
-        "app_url_scheme" : "echofon:///"
+        "app_url_scheme" : "echofon:"
         }]
  }]
