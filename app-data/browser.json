@@ -35,7 +35,7 @@
         [{
          "name" : "Safari",
          "key" : "safari",
-         "app_url_scheme" : "http://",
+         "app_url_scheme" : "http:",
          "actions" :
         [
         {
@@ -46,7 +46,7 @@
         {
         "name" : "Chrome",
         "key" : "chrome",
-        "app_url_scheme" : "googlechrome-x-callback://",
+        "app_url_scheme" : "googlechrome-x-callback:",
         "actions" :
             [{
             "key" : "browse",
