@@ -3,35 +3,90 @@
     "key" : "twitter",
     "parameters" :
         [{
-         "name" : "Text",
-         "description" : "Text to insert into the new tweet textbox",
-         "key" : "text"
+             "name" : "Text",
+             "description" : "Text to insert into the new tweet textbox",
+             "key" : "text"
          },
          {
-         "name" : "Profile Username",
-         "description" : "Username of the profile to be shown",
-         "key" : "profile_screenname",
+             "name" : "Url",
+             "description" : "Url to add to the new tweet textbox",
+             "key" : "url_in_tweet"
          },
          {
-         "name" : "Callback URL",
-         "description" : "URL of the app to go back to when action is done",
-         "key" : "callback_url",
+             "name" : "Tweet ID",
+             "description" : "ID of the tweet you're referencing",
+             "key" : "reference_tweet_id"
+         },
+         {
+             "name" : "Via",
+             "description" : "A screenname to associate with a tweet (without the at symbol)",
+             "key" : "via"
+         },
+         {
+             "name" : "Hashtags",
+             "description" : "Hashtags realted to tweet action, separated by comma (omit the # symbol)",
+             "key" : "hashtags"
+         },
+         {
+             "name" : "Related Usernames",
+             "description" : "Suggest accounts related to the your content or intention by comma-separating a list of screen names. You can provide a brief description of how the account relates by following the screenname with a colon and text. Both the colon and the text should be URL-encoded.",
+             "key" : "related"
+         },
+         {
+             "name" : "Profile Username",
+             "description" : "Username of a twitter profile, ex: elonmusk",
+             "key" : "profile_screenname"
+         },
+         {
+             "name" : "User Id",
+             "description" : "User ID of a twitter profile, ex: 3308337",
+             "key" : "user_id"
+         },
+         {
+             "name" : "Callback URL",
+             "description" : "URL of the app to go back to when action is done",
+             "key" : "callback_url"
          }],
     "actions" :
         [{
-        "name" : "Show Profile",
-        "key" : "show_profile"
-        }],
+            "name" : "Show Profile",
+            "key" : "show_profile"
+         },
+         {
+            "name" : "Post Tweet",
+            "key" : "post"
+         },
+         {
+             "name" : "Retweet a tweet",
+             "key" : "retweet"
+         },
+         {
+             "name" : "Favorite a tweet",
+             "key" : "favorite"
+         }],
     "apps" :
         [{
          "name" : "Safari",
          "key" : "safari",
          "app_url_scheme" : "http://www.twitter.com",
          "actions" :
-        [{
-            "key" : "show_profile",
-            "url_format" : "http://www.twitter.com/{{profile_screenname}}"
-        }]
+            [{
+                "key" : "show_profile",
+                "url_format" : "http://www.twitter.com/{{profile_screenname}}"
+             },
+             {
+                "key" : "post",
+                "url_format": "https://twitter.com/intent/tweet?text={{text}}&url={{url_in_tweet}}&via={{via}}&hashtags={{hashtags}}&related={{related}}"
+             },
+             {
+                 "key" : "retweet",
+                 "url_format": "https://twitter.com/intent/retweet?tweet_id={{reference_tweet_id}}&related={{related}}"
+             },
+             {
+                 "key" : "favorite",
+                 "url_format": "https://twitter.com/intent/favorite?tweet_id={{reference_tweet_id}}&related={{related}}"
+             }]
+
         },
         {
         "name" : "Twitter",
@@ -49,8 +104,8 @@
         "app_url_scheme" : "tweetbot:",
         "actions" :
             [{
-            "key" : "tweet",
-            "url_format" : "tweetbot:"
+            "key" : "post",
+            "url_format" : "tweetbot:///post?text={{text}}&callback_url={{callback_url}}&in_reply_to_status_id={{reference_tweet_id}}"
             }, 
             {
             "key" : "show_profile",
@@ -63,7 +118,7 @@
         "app_url_scheme" : "twitteriffic:",
         "actions" :
             [{
-            "key" : "tweet",
+            "key" : "post",
             "url_format" : "twitteriffic:"
             }]
         },
