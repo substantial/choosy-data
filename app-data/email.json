@@ -67,5 +67,15 @@
             "key" : "compose",
             "url_format" : "ymail://"
             }]
-        }]
+        },
+        {
+        "name" : "Dispatch",
+        "key" : "dispatch",
+        "app_url_scheme" : "x-dispatch:",
+        "actions" :
+            [{
+            "key" : "compose",
+            "url_format" : "x-dispatch:///compose?to={{to}}&cc={{cc}}&subject={{subject}}&body={{body}}"
+            }]
+		}]
  }]
