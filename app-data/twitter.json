@@ -43,6 +43,11 @@
              "key" : "user_id"
          },
          {
+             "name" : "List ID",
+             "description" : "ID of a list",
+             "key" : "list_id"
+         },
+         {
              "name" : "Callback URL",
              "description" : "URL of the app to go back to when action is done",
              "key" : "callback_url"
@@ -57,12 +62,60 @@
             "key" : "post"
          },
          {
-             "name" : "Retweet a tweet",
+             "name" : "Retweet",
              "key" : "retweet"
          },
          {
-             "name" : "Favorite a tweet",
+             "name" : "Mark as Favorite",
              "key" : "favorite"
+         },
+         {
+             "name" : "Unmark as Favorite",
+             "key" : "unfavorite"
+         },
+         {
+             "name" : "Show Timeline",
+             "key" : "timeline"
+         },
+         {
+             "name" : "Show Mentions",
+             "key" : "mentions"
+         },
+         {
+             "name" : "Show Retweets",
+             "key" : "retweets"
+         },
+         {
+             "name" : "Show Direct Messages",
+             "key" : "direct_messages"
+         },
+         {
+             "name" : "Show Lists",
+             "key" : "lists"
+         },
+         {
+             "name" : "Show a List",
+             "key" : "list"
+         },
+         {
+             "name" : "Show Favorites",
+             "key" : "favorites"
+         },
+         {
+             "name" : "Search Twitter",
+             "key" : "search"
+         },
+         {
+             "name" : "Show a Specific Tweet/Status",
+             "key" : "status"
+         },
+         {
+             "name" : "Follow Someone",
+             "key" : "follow"
+         },
+         {
+             "name" : "Unfollo Someone",
+             "key" : "unfollow"
          }],
     "apps" :
         [{
@@ -97,6 +150,7 @@
                 "key" : "post",
                 "url_format" : "twitter://post?text={{text}}"
              },
+
              {
                 "key" : "show_profile",
                 "url_format" : "twitter://user?screen_name={{profile_screenname}}"
@@ -108,12 +162,68 @@
         "app_url_scheme" : "tweetbot:",
         "actions" :
             [{
-            "key" : "post",
-            "url_format" : "tweetbot:///post?text={{text}}&callback_url={{callback_url}}&in_reply_to_status_id={{reference_tweet_id}}"
+                "key" : "post",
+                "url_format" : "tweetbot:///post?text={{text}}&callback_url={{callback_url}}&in_reply_to_status_id={{reference_tweet_id}}"
             }, 
             {
-            "key" : "show_profile",
-            "url_format" : "tweetbot:///user_profile/{{profile_screenname}}?callback_url={{callback_url}}"
+                "key" : "show_profile",
+                "url_format" : "tweetbot:///user_profile/{{profile_screenname}}?callback_url={{callback_url}}"
+            },
+            {
+                "key" : "search",
+                "url_format" : "tweetbot:///search?query={{text}}&callback_url={{callback_url}}"
+            },
+            {
+                "key" : "status",
+                "url_format" : "tweetbot:///status/{{reference_tweet_id}}?callback_url={{callback_url}}"
+            },
+            {
+                "key" : "follow",
+                "url_format" : "tweetbot:///follow/{{profile_screenname}}"
+            },
+            {
+                "key" : "unfollow",
+                "url_format" : "tweetbot:///unfollow/{{profile_screenname}}"
+            },
+            {
+                "key" : "favorite",
+                "url_format" : "tweetbot:///favorite/{{reference_tweet_id}}"
+            },
+            {
+                "key" : "unfavorite",
+                "url_format" : "tweetbot:///unfavorite/{{reference_tweet_id}}"
+            },
+            {
+                "key" : "retweet",
+                "url_format" : "tweetbot:///retweet/{{reference_tweet_id}}"
+            },
+            {
+                "key" : "timeline",
+                "url_format" : "tweetbot:///timeline/"
+            },
+            {
+                "key" : "mentions",
+                "url_format" : "tweetbot:///mentions/"
+            },
+            {
+                "key" : "retweets",
+                "url_format" : "tweetbot:///retweets/"
+            },
+            {
+                "key" : "direct_messages",
+                "url_format" : "tweetbot:///direct_messages/"
+            },
+            {
+                "key" : "lists",
+                "url_format" : "tweetbot:///lists/"
+            },
+            {
+                "key" : "list",
+                "url_format" : "tweetbot:///list/{{list_id}}?callback_url={{callback_url}}"
+            },
+            {
+                "key" : "favorites",
+                "url_format" : "tweetbot:///favorites/"
             }]
         },
         {
