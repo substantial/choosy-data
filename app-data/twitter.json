@@ -76,7 +76,7 @@
              },
              {
                 "key" : "post",
-                "url_format": "https://twitter.com/intent/tweet?text={{text}}&url={{url_in_tweet}}&via={{via}}&hashtags={{hashtags}}&related={{related}}"
+                "url_format": "https://twitter.com/intent/tweet?text={{text}}&url={{url_in_tweet}}&via={{via}}&hashtags={{hashtags}}&related={{related}}&in_reply_to={{reference_tweet_id}}"
              },
              {
                  "key" : "retweet",
@@ -91,11 +91,15 @@
         {
         "name" : "Twitter",
         "key" : "twitter",
-        "app_url_scheme" : "twitter://",
+        "app_url_scheme" : "twitter:",
         "actions" :
             [{
-            "key" : "show_profile",
-            "url_format" : "twitter://user?screen_name={{profile_screenname}}"
+                "key" : "post",
+                "url_format" : "twitter://post?text={{text}}"
+             },
+             {
+                "key" : "show_profile",
+                "url_format" : "twitter://user?screen_name={{profile_screenname}}"
             }]
         },
         {
