@@ -162,16 +162,16 @@
         "app_url_scheme" : "tweetbot:",
         "actions" :
             [{
-            "key" : "post",
-            "url_format" : "tweetbot:///post?text={{text}}&callback_url={{callback_url}}&in_reply_to_status_id={{reference_tweet_id}}"
+                "key" : "post",
+                "url_format" : "tweetbot:///post?text={{text}}&callback_url={{callback_url}}&in_reply_to_status_id={{reference_tweet_id}}"
             }, 
             {
-            "key" : "show_profile",
-            "url_format" : "tweetbot:///user_profile/{{profile_screenname}}?callback_url={{callback_url}}"
+                "key" : "show_profile",
+                "url_format" : "tweetbot:///user_profile/{{profile_screenname}}?callback_url={{callback_url}}"
             },
             {
                 "key" : "search",
-                "url_format" : "tweetbot:///post?query={{text}}&callback_url={{callback_url}}"
+                "url_format" : "tweetbot:///search?query={{text}}&callback_url={{callback_url}}"
             },
             {
                 "key" : "status",
