@@ -112,12 +112,8 @@
                 "url_format" : "tweetbot:///user_profile/{{profile_screenname}}?callback_url={{callback_url}}"
             },
             {
-                "key" : "search",
-                "url_format" : "tweetbot:///search?query={{text}}&callback_url={{callback_url}}"
-            },
-            {
                 "key" : "status",
-                "url_format" : "tweetbot:///status/{{reference_tweet_id}}?callback_url={{callback_url}}"
+                "url_format" : "tweetbot:///status/{{reference_tweet_id}}"
             },
             {
                 "key" : "follow",
