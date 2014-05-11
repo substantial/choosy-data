@@ -4,85 +4,43 @@
   "key" : "maps",
   "parameters" :
   [{
-   "name" : "Search Query",
-   "description" : "Name of business or address to search for",
-   "key" : "query"
-   },
-   {
-   "name" : "Start Location",
-   "description" : "In plain text, such as 1 Infinite Loop, Cupertino, CA 95014",
-   "key" : "start_address"
-   },
-   {
-   "name" : "Destination Location",
-   "description" : "In plain text, such as 1 Infinite Loop, Cupertino, CA 95014",
-   "key" : "end_address"
-   },
-   {
-   "name" : "Location",
-   "description" : "A string that contains latitude and longitude, separated by comma. Example: '37.44469,-122.15971'",
-   "key" : "latitude_longitude"
-   },
-   {
-   "name" : "Map Mode",
-   "description" : "Such as hybrid, sattelite, etc.",
-   "key" : "map_mode"
+      "name" : "Location",
+      "description" : "A string that contains latitude and longitude, separated by comma. Example: '37.44469,-122.15971'",
+      "key" : "latitude_longitude"
    },   
    {
-   "name" : "Start Navigation",
-   "description" : "Pass 'yes' immediately begin turn-by-turn directions, without waiting for user to press the start button",
-   "key" : "start_navigating"
+      "name" : "Start Navigation",
+      "description" : "Pass 'yes' immediately begin turn-by-turn directions, without waiting for user to press the start button",
+      "key" : "start_navigating"
    }, 
    {
-      "name" : "URL for callback",
+      "name" : "Callback URL",
       "description" : "Url scheme to call in order to return to your app",
       "key" : "callback_url"
    }, 
    {
-      "name" : "Callback app name",
-      "description" : "Name of your app, if using callback feature",
+      "name" : "Callback App Name",
+      "description" : "Brief name of your app, if using callback feature",
       "key" : "callback_name"
    }],
   "actions" :
   [{
-   "name" : "Get Directions",
-   "key" : "get_directions"
-   }, 
-   {
-    "name" : "Search/query",
-    "key" : "search"
-   }, 
-   {
-    "name" : "Specific Location",
-    "key" : "show_location"
+      "name" : "Specific Location",
+      "key" : "show_location"
    }],
   "apps" :
   [{
-    "name" : "Maps",
-    "key" : "maps",
-    "app_url_scheme" : "http://maps.apple.com/?q",
-    "actions" :
-      [{
-      "key" : "get_directions",
-      "url_format" : "http://maps.apple.com/?daddr={{end_address}}&saddr={{start_address}}"
-      },
-      {
-      "key" : "search",
-      "url_format" : "http://maps.apple.com/?q={{query}}"
-      }]
-  },
-  {
    	"name" : "Google Maps",
    	"key" : "googlemaps",
    	"app_url_scheme" : "comgooglemaps-x-callback:",
    	"actions" :
       [{
-      "key" : "get_directions",
-      "url_format" : "comgooglemaps-x-callback://?daddr={{end_address}}&saddr={{start_address}}&x-success={{callback_url}}&x-source={{callback_name}}"
+          "key" : "get_directions",
+          "url_format" : "comgooglemaps-x-callback://?daddr={{end_address}}&saddr={{start_address}}&x-success={{callback_url}}&x-source={{callback_name}}"
       },
       {
-      "key" : "search",
-      "url_format" : "comgooglemaps-x-callback://?q={{query}}&x-success={{callback_url}}&x-source={{callback_name}}"
+          "key" : "search",
+          "url_format" : "comgooglemaps-x-callback://?q={{query}}&x-success={{callback_url}}&x-source={{callback_name}}"
       }]
   },
   {
@@ -91,16 +49,16 @@
    	"app_url_scheme" : "waze:",
    	"actions" :
       [{
-      "key" : "get_directions",
-      "url_format" : "waze://?ll={{latitude_longitude}}&navigate={{start_navigating}}"
+          "key" : "get_directions",
+          "url_format" : "waze://?ll={{latitude_longitude}}&navigate={{start_navigating}}"
       },
       {
-      "key" : "search",
-      "url_format" : "waze://?q={{query}}"
+          "key" : "search",
+          "url_format" : "waze://?q={{query}}"
       },
       {
-      "key" : "show_location",
-      "url_format" : "waze://?ll={{latitude_longitude}}"
+          "key" : "show_location",
+          "url_format" : "waze://?ll={{latitude_longitude}}"
       }]
   }]
 }]

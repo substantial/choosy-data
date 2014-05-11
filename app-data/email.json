@@ -2,50 +2,18 @@
     "name" : "Email",
     "key" : "email",
     "parameters" :
-      [{
-        "name" : "Body Text",
-        "description" : "Text to insert into the body of a new email",
-        "key" : "body"
-       },
-       {
-        "name" : "Recipients - To",
-        "description" : "Recipient(s) email address(ses)",
-        "key" : "to"
-       },
-       {
-        "name" : "Recipients - CC",
-        "description" : "Email addresses to CC (copy)",
-        "key" : "cc"
-       },
-       {
-       "name" : "Subject",
-       "description" : "Email subject",
-       "key" : "subject"
-    }],
+      [],
     "actions" :
-        [{
-        "name" : "Compose",
-        "key" : "compose"
-    }],
+        [],
     "apps" :
         [{
-        "name" : "Mail",
-        "key" : "mail",
-        "app_url_scheme" : "mailto:",
-        "actions" :
-            [{
-            "key" : "compose",
-            "url_format" : "mailto:?to={{to}}&cc={{cc}}&subject={{subject}}&body={{body}}"
-            }]
-        },
-        {
         "name" : "Gmail",
         "key" : "gmail",
         "app_url_scheme" : "googlegmail:",
         "actions" :
             [{
-            "key" : "compose",
-            "url_format" : "googlegmail://co?subject={{subject}}&body={{body}}&to={{to}}&cc={{cc}}"
+                "key" : "compose",
+                "url_format" : "googlegmail:///co?subject={{subject}}&body={{body}}&to={{to}}&cc={{cc}}"
             }]
         },
         {
@@ -54,8 +22,8 @@
         "app_url_scheme" : "mailbox-url-callback:",
         "actions" :
             [{
-            "key" : "compose",
-            "url_format" : "mailbox-url-callback:"
+                "key" : "compose",
+                "url_format" : "mailbox-url-callback:"
             }]
         },
         {
@@ -64,8 +32,8 @@
         "app_url_scheme" : "ymail:",
         "actions" :
             [{
-            "key" : "compose",
-            "url_format" : "ymail://"
+                "key" : "compose",
+                "url_format" : "ymail://"
             }]
         },
         {
@@ -74,8 +42,8 @@
         "app_url_scheme" : "x-dispatch:",
         "actions" :
             [{
-            "key" : "compose",
-            "url_format" : "x-dispatch:///compose?to={{to}}&cc={{cc}}&subject={{subject}}&body={{body}}"
+                "key" : "compose",
+                "url_format" : "x-dispatch:///compose?to={{to}}&cc={{cc}}&subject={{subject}}&body={{body}}"
             }]
 		}]
  }]
