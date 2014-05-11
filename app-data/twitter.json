@@ -3,53 +3,12 @@
     "key" : "twitter",
     "parameters" :
         [{
-             "name" : "Text",
-             "description" : "Text to insert into the new tweet textbox",
-             "key" : "text"
-         },
-         {
-             "name" : "Tweet ID",
-             "description" : "ID of the tweet you're referencing",
-             "key" : "reference_tweet_id"
-         },
-         {
-             "name" : "Profile Username",
-             "description" : "Username of a twitter profile, ex: elonmusk",
-             "key" : "profile_screenname"
-         },
-         {
-             "name" : "User Id",
-             "description" : "User ID of a twitter profile, ex: 3308337",
-             "key" : "user_id"
-         },
-         {
              "name" : "List ID",
              "description" : "ID of a list",
              "key" : "list_id"
-         },
-         {
-             "name" : "Callback URL",
-             "description" : "URL of the app to go back to when action is done",
-             "key" : "callback_url"
          }],
     "actions" :
         [{
-            "name" : "Show Profile",
-            "key" : "show_profile"
-         },
-         {
-            "name" : "Post Tweet",
-            "key" : "post"
-         },
-         {
-             "name" : "Retweet",
-             "key" : "retweet"
-         },
-         {
-             "name" : "Mark as Favorite",
-             "key" : "favorite"
-         },
-         {
              "name" : "Unmark as Favorite",
              "key" : "unfavorite"
          },

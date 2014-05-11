@@ -3,16 +3,6 @@
     "key" : "browser",
     "parameters" :
         [{
-         "name" : "Destination Url",
-         "description" : "Destination url, must include scheme (either http or https)",
-         "key" : "url"
-         },
-         {
-         "name" : "Query",
-         "description" : "Search query",
-         "key" : "query",
-         }, 
-         {
             "name" : "URL for callback",
             "description" : "Url scheme to call in order to return to your app",
             "key" : "callback_url"
@@ -23,34 +13,16 @@
             "key" : "callback_name"
          }],
     "actions" :
-        [{
-        "name" : "Browse via HTTP",
-        "key" : "browse_http"
-        },
-        {
-        "name" : "Browse via HTTPS",
-        "key" : "browse_https"
-        }],
+        [],
     "apps" :
         [{
-         "name" : "Safari",
-         "key" : "safari",
-         "app_url_scheme" : "http:",
-         "actions" :
-        [
-        {
-            "key" : "browse",
-            "url_format" : "{{url}}"
-        }]
-        },
-        {
         "name" : "Chrome",
         "key" : "chrome",
         "app_url_scheme" : "googlechrome-x-callback:",
         "actions" :
             [{
-            "key" : "browse",
-            "url_format" : "googlechrome-x-callback://x-callback-url/open/?x-source={{callback_name}}&x-success={{callback_url}}&url={{url}}"
+                "key" : "browse",
+                "url_format" : "googlechrome-x-callback://x-callback-url/open/?x-source={{callback_name}}&x-success={{callback_url}}&url={{url}}"
             }]
         }]
  }]
