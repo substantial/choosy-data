@@ -12,22 +12,30 @@ The format for the files is as follows:
 
 ``` 
 [{
-  name:                   app type/category name in human-readable form, capitalized (ex: "Music Mixers")
-  key:                    unique string key (ex: "music_mixers")
+  name,                   app type/category name in human-readable form, capitalized (ex: "Music Mixers")
+  key,                    unique string key (ex: "music_mixers")
   parameters:             (array of all parameters for this app type, across all apps)
-      name:               human-readable, capitalized (ex: Profile Username")
-      description:        human-readable, a sentence (ex: "Username of the profile to be shown")
-      key:                unique in the scope of this app type (ex: "profile_screenname")
+  [{
+      name,               human-readable, capitalized (ex: Profile Username")
+      description,        human-readable, a sentence (ex: "Username of the profile to be shown")
+      key                unique in the scope of this app type (ex: "profile_screenname")
+  }], 
   actions:                (array of all supported actions for this app type)
-      name:               human-readable, capitalized (ex: "Show Profile")
-      key:                unique in the scope of this app type (ex: "show_profile")
+  [{
+      name,               human-readable, capitalized (ex: "Show Profile")
+      key                 unique in the scope of this app type (ex: "show_profile")
+  }],
   apps:                   (array of all apps that this app type represents)
-      name:               name to display below the icon (ex: "Tweetbot")
-      key:                unique across all app types, so search if already used (ex: "tweetbot")
-      app_url_scheme:     the front part of the url scheme, including the colon (ex: "tweetbot:")
+  [{
+      name,               name to display below the icon (ex: "Tweetbot")
+      key,                unique across all app types, so search if already used (ex: "tweetbot")
+      app_url_scheme,     the front part of the url scheme, including the colon (ex: "tweetbot:")
       actions:            (array of actions that this app supports)
-          key:            one of the keys from the 'actions' defined above for this app type (ex: "show_profile")
-          url_format:     app-specific url scheme format for this action, with parameters in double curly braces (ex: "tweetbot:///user_profile/{{profile_screenname}}?callback_url={{callback_url}}")
+      [{
+          key,            one of the keys from the 'actions' defined above for this app type (ex: "show_profile")
+          url_format      app-specific url scheme format for this action, with parameters in double curly braces (ex: "tweetbot:///user_profile/{{profile_screenname}}?callback_url={{callback_url}}")
+      ]}
+  ]}
 }]
 ```
 
