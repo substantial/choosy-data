@@ -10,7 +10,7 @@ Each JSON file's name is the name of the app type. So if the app type is "twitte
 
 The format for the files is as follows:
 
-```json 
+``` 
 [{
   name:                   app type/category name in human-readable form, capitalized (ex: "Music Mixers")
   key:                    unique string key (ex: "music_mixers")
