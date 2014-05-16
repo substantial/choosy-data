@@ -10,24 +10,24 @@ Each JSON file's name is the name of the app type. So if the app type is "twitte
 
 The format for the files is as follows:
 
-```
+```json 
 [{
-  name:   app type/category name in human-readable form, capitalized (ex: "Music Mixers")
-  key:    unique string key (ex: "music_mixers")
-  parameters:   (array of all parameters for this app type, across all apps)
-      name:         human-readable, capitalized (ex: Profile Username")
-      description:  human-readable, a sentence (ex: "Username of the profile to be shown")
-      key:          unique in the scope of this app type (ex: "profile_screenname")
-  actions:      (array of all supported actions for this app type)
-      name:  human-readable, capitalized (ex: "Show Profile")
-      key:   unique in the scope of this app type (ex: "show_profile")
-  apps:     (array of all apps that this app type represents)
-      name:    name to display below the icon (ex: "Tweetbot")
-      key:     unique across all app types, so search if already used (ex: "tweetbot")
-      app_url_scheme:  the front part of the url scheme, including the colon (ex: "tweetbot:")
-      actions:  (array of actions that this app supports)
-          key:  one of the keys from the 'actions' defined above for this app type (ex: "show_profile")
-          url_format:  app-specific url scheme format for this action, with parameters in double curly braces (ex: "tweetbot:///user_profile/{{profile_screenname}}?callback_url={{callback_url}}")
+  name:                   app type/category name in human-readable form, capitalized (ex: "Music Mixers")
+  key:                    unique string key (ex: "music_mixers")
+  parameters:             (array of all parameters for this app type, across all apps)
+      name:               human-readable, capitalized (ex: Profile Username")
+      description:        human-readable, a sentence (ex: "Username of the profile to be shown")
+      key:                unique in the scope of this app type (ex: "profile_screenname")
+  actions:                (array of all supported actions for this app type)
+      name:               human-readable, capitalized (ex: "Show Profile")
+      key:                unique in the scope of this app type (ex: "show_profile")
+  apps:                   (array of all apps that this app type represents)
+      name:               name to display below the icon (ex: "Tweetbot")
+      key:                unique across all app types, so search if already used (ex: "tweetbot")
+      app_url_scheme:     the front part of the url scheme, including the colon (ex: "tweetbot:")
+      actions:            (array of actions that this app supports)
+          key:            one of the keys from the 'actions' defined above for this app type (ex: "show_profile")
+          url_format:     app-specific url scheme format for this action, with parameters in double curly braces (ex: "tweetbot:///user_profile/{{profile_screenname}}?callback_url={{callback_url}}")
 }]
 ```
 
@@ -47,7 +47,6 @@ Please note that as of this writing, each app requires a corresponding app icon 
 * \<appKey\>@2x~ipad.png - 152x152 px
 
 If you want to just submit JSON additions without an icon, that's fine. We'll find the icon(s) ourselves and merge your pull request afterwards. Any help is better than no help :)
-
 
 
 **Thank you!**
