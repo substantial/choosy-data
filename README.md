@@ -18,7 +18,7 @@ The format for the files is as follows:
   [{
       name,               human-readable, capitalized (ex: Profile Username")
       description,        human-readable, a sentence (ex: "Username of the profile to be shown")
-      key                unique in the scope of this app type (ex: "profile_screenname")
+      key                 unique in the scope of this app type (ex: "profile_screenname")
   }], 
   actions:                (array of all supported actions for this app type)
   [{
