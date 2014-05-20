@@ -186,6 +186,15 @@
         {
         "name" : "Echofon",
         "key" : "echofon",
-        "app_url_scheme" : "echofon:"
+        "app_url_scheme" : "echofon:",
+        "actions" :
+            [{
+                "key" : "post",
+                "url_format" : "echofon:///in_reply_to?id={{reference_tweet_id}}&to={{profile_username}}&msg={{text}}"
+            }, 
+            {
+                "key" : "show_profile",
+                "url_format" : "echofon:///user_timeline?{{profile_screenname}}"
+            }]
         }]
  }]
