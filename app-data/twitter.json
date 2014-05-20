@@ -6,6 +6,16 @@
              "name" : "List ID",
              "description" : "ID of a list",
              "key" : "list_id"
+         },
+         {
+             "name" : "Account Screen Name",
+             "description" : "Screen Name of an Account belonging to User",
+             "key" : "account_screenname"
+         },
+         {
+             "name" : "ID of a Direct Message",
+             "description" : "",
+             "key" : "direct_message_id"
          }],
     "actions" :
         [{
@@ -27,6 +37,10 @@
          {
              "name" : "Show Direct Messages",
              "key" : "direct_messages"
+         },
+         {
+             "name" : "Show a Direct Message",
+             "key" : "direct_message"
          },
          {
              "name" : "Show Lists",
@@ -128,13 +142,45 @@
             }]
         },
         {
-        "name" : "Twitteriffic",
-        "key" : "twitteriffic",
-        "app_url_scheme" : "twitteriffic:",
+        "name" : "Twitterific",
+        "key" : "twitterific",
+        "app_url_scheme" : "twitterrific:",
         "actions" :
             [{
-            "key" : "post",
-            "url_format" : "twitteriffic:"
+                "key" : "post",
+                "url_format" : "twitterrific://account/{{account_screenname}}/post?message={{text}}"
+            }, 
+            {
+                "key" : "show_profile",
+                "url_format" : "twitterrific://account/{{account_screenname}}/profile?screen_name={{profile_screenname}}"
+            },
+            {
+                "key" : "search",
+                "url_format" : "twitterrific://account/{{account_screenname}}/search?q={{text}}"
+            },
+            {
+                "key" : "status",
+                "url_format" : "twitterrific://account/{{account_screenname}}/tweet?id={{reference_tweet_id}}"
+            },
+            {
+                "key" : "timeline",
+                "url_format" : "twitterrific://account/{{account_screenname}}/tweets"
+            },
+            {
+                "key" : "mentions",
+                "url_format" : "twitterrific://account/{{account_screenname}}/mentions"
+            },
+            {
+                "key" : "direct_messages",
+                "url_format" : "twitterrific://account/{{account_screenname}}/messages"
+            },
+            {
+                "key" : "direct_message",
+                "url_format" : "twitterrific://account/{{account_screenname}}/message?id={{direct_message_id}}"
+            },
+            {
+                "key" : "favorites",
+                "url_format" : "twitterrific://account/{{account_screenname}}/favorites"
             }]
         },
         {
