@@ -196,5 +196,47 @@
                 "key" : "show_profile",
                 "url_format" : "echofon:///user_timeline?{{profile_screenname}}"
             }]
+        },
+        {
+        "name" : "Twittelator",
+        "key" : "twittelator",
+        "app_url_scheme" : "twit:",
+        "actions" :
+            [{
+                "key" : "post",
+                "url_format" : "twit:///post?message={{text}}&replyToScreenName={{profile_username}}&replyToStatusID={{reference_tweet_id}}"
+            }, 
+            {
+                "key" : "direct_messages",
+                "url_format" : "twit:///directs?from={{profile_screenname}}&to={{account_screenname}}"
+            }, 
+            {
+                "key" : "direct_message",
+                "url_format" : "twit:///directs?id={{direct_message_id}}&to={{account_screenname}}"
+            }, 
+            {
+                "key" : "mentions",
+                "url_format" : "twit:///mentions?id={{direct_message_id}}&to={{account_screenname}}"
+            }, 
+            {
+                "key" : "search",
+                "url_format" : "twit:///search?q={{text}}&from={{profile_screenname}}"
+            }, 
+            {
+                "key" : "show_profile",
+                "url_format" : "twit:///user?screen_name={{profile_screenname}}&id={{user_id}}"
+            }, 
+            {
+                "key" : "status",
+                "url_format" : "twit:///status?id={{reference_tweet_id}}"
+            }, 
+            {
+                "key" : "retweet",
+                "url_format" : "twit:///retweet?id={{reference_tweet_id}}"
+            }, 
+            {
+                "key" : "search",
+                "url_format" : "twit:///search?q={{text}}&from={{profile_screenname}}"
+            }]
         }]
  }]
