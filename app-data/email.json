@@ -46,7 +46,7 @@
                 "url_format" : "x-dispatch:///compose?to={{to}}&cc={{cc}}&subject={{subject}}&body={{body}}"
          },
          {
-            	"key" : "message",
+            	"key" : "view_message",
             	"url_format" : "x-dispatch:///{{message_id}}"
          }]
 	}]
