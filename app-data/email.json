@@ -41,9 +41,13 @@
         "key" : "dispatch",
         "app_url_scheme" : "x-dispatch:",
         "actions" :
-            [{
-                "key" : "compose",
+         [{
+         	"key" : "compose",
                 "url_format" : "x-dispatch:///compose?to={{to}}&cc={{cc}}&subject={{subject}}&body={{body}}"
-            }]
-		}]
+         },
+         {
+            	"key" : "message",
+            	"url_format" : "x-dispatch:///{{message_id}}"
+         }]
+	}]
  }]
